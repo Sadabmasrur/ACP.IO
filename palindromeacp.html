@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bg color changer</title>
+
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100rem;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      #background {
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+      }
+
+      h1 {
+        color: whitesmoke;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="background">
+      <h1>Background color changer mechine!!</h1>
+      <button onclick="clickFunction()">..Click Me..</button>
+    </div>
+
+    <script>
+      function clickFunction() {
+        let bg = document.getElementById("background");
+        let colors = [
+          "red",
+          "green",
+          "blue",
+          "yellow",
+          "indigo",
+          "brown",
+          "purple",
+          "orange",
+          "grey",
+        ];
+        const colorIndex = Math.floor(Math.random() * colors.length);
+        bg.style.backgroundColor = colors[colorIndex];
+      }
+    </script>
+  </body>
+</html>
